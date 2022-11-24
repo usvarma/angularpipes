@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name: string = '';
   date: string = '';
-  amount: string = '';
+  amount: number = 0;
 
   onNameChange(event: any){
     this.name = (event.target as HTMLInputElement).value;
@@ -19,6 +19,6 @@ export class AppComponent {
   }
 
   onAmountChange(event:any){
-    this.amount = (event.target as HTMLInputElement).value;
+    this.amount = Number((event.target as HTMLInputElement).value);
   }
 }
